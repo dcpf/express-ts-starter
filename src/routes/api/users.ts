@@ -1,10 +1,9 @@
-import { Request, Response } from 'express';
-import Router from 'express-promise-router';
+import express, { Request, Response } from 'express';
 import { User } from '../../model/user';
 import * as userService from '../../service/userService';
 import { ApiError } from '../../error/ApiError';
 
-const router = Router();
+const router = express.Router();
 
 // get users
 router.get('/', async (_req: Request, res: Response<User[]>) => {

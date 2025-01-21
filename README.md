@@ -8,7 +8,7 @@ Starter scaffolding for Express with TypeScript and example routes for HTML view
 - dotenv
 - eslint
 - express
-- express-promise-router
+- express-async-errors
 - helmet
 - jest
 - morgan

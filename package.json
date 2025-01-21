@@ -1,6 +1,6 @@
 {
   "name": "express-ts-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "Express",
     "TypeScript",
@@ -18,7 +18,7 @@
     "dev-start:hot": "nodemon --exec \"yarn run dev-start\" --watch ./src --ext .ts",
     "lint": "eslint",
     "prettier": "npx prettier . --check",
-    "test": "ts-jest",
+    "test": "jest",
     "test:hot": "nodemon --exec \"yarn run test\" --watch ./src --watch ./spec --ext .ts",
     "type-check": "tsc --noEmit"
   },
@@ -27,7 +27,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "~4.16.1",
-    "express-promise-router": "^4.1.1",
+    "express-async-errors": "^3.1.1",
     "helmet": "^8.0.0",
     "morgan": "~1.9.1"
   },

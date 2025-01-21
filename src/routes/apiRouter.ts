@@ -1,7 +1,7 @@
-import Router from 'express-promise-router';
+import express from 'express';
 import users from './api/users';
 
-const router = Router();
+const router = express.Router();
 
 router.use('/users', users);
 

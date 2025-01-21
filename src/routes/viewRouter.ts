@@ -1,7 +1,7 @@
-import Router from 'express-promise-router';
+import express from 'express';
 import home from './view/home';
 
-const router = Router();
+const router = express.Router();
 
 router.use('/', home);
 

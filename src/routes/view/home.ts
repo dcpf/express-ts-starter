@@ -1,7 +1,6 @@
-import { Request, Response } from 'express';
-import Router from 'express-promise-router';
+import express, { Request, Response } from 'express';
 
-const router = Router();
+const router = express.Router();
 
 router.get('/', (_req: Request, res: Response) => {
   res.render('home');

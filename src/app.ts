@@ -5,6 +5,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import logger from 'morgan';
 
+import 'express-async-errors';
+
 import apiRouter from './routes/apiRouter';
 import viewRouter from './routes/viewRouter';
 import { ApiError } from './error/ApiError';

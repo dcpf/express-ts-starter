@@ -3,9 +3,11 @@ import tseslint from 'typescript-eslint';
 import stylisticJs from '@stylistic/eslint-plugin-js';
 import stylisticTs from '@stylistic/eslint-plugin-ts';
 import nodePlugin from 'eslint-plugin-n';
+import eslintPrettierPlugin from 'eslint-plugin-prettier/recommended';
 
 export default tseslint.config(
   eslint.configs.recommended,
+  eslintPrettierPlugin,
   nodePlugin.configs['flat/recommended-script'],
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,
@@ -64,7 +66,7 @@ export default tseslint.config(
       '@typescript-eslint/no-unsafe-enum-comparison': 0,
       '@typescript-eslint/no-unused-expressions': 'warn',
       '@typescript-eslint/no-unused-vars': [
-        'warn',
+        'error',
         {
           argsIgnorePattern: '^_',
           varsIgnorePattern: '^_',

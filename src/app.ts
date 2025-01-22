@@ -5,6 +5,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import logger from 'morgan';
 
+// Won't be needed with express 5
 import 'express-async-errors';
 
 import apiRouter from './routes/apiRouter';

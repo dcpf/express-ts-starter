@@ -7,8 +7,8 @@ import nodePlugin from 'eslint-plugin-n';
 export default tseslint.config(
   eslint.configs.recommended,
   nodePlugin.configs['flat/recommended-script'],
-  ...tseslint.configs.strictTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
+  tseslint.configs.strictTypeChecked,
+  tseslint.configs.stylisticTypeChecked,
   {
     ignores: ['**/node_modules/*', '**/*.mjs', '**/*.js'],
   },
@@ -37,29 +37,18 @@ export default tseslint.config(
       '@stylistic/js/max-len': ['warn', { code: 80 }],
       '@stylistic/js/no-extra-semi': 'warn',
       '@stylistic/js/quotes': ['warn', 'single'],
+      '@stylistic/js/semi': ['warn', 'always'],
 
       '@stylistic/ts/member-delimiter-style': [
-        'warn',
+        'error',
         {
           multiline: {
-            delimiter: 'comma',
+            delimiter: 'semi',
             requireLast: true,
           },
           singleline: {
-            delimiter: 'comma',
+            delimiter: 'semi',
             requireLast: false,
-          },
-          overrides: {
-            interface: {
-              singleline: {
-                delimiter: 'semi',
-                requireLast: false,
-              },
-              multiline: {
-                delimiter: 'semi',
-                requireLast: true,
-              },
-            },
           },
         },
       ],

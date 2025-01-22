@@ -14,6 +14,5 @@ export const getUsers = async (): Promise<User[]> => {
 
 export const getUser = async (id: string): Promise<User | undefined> => {
   const users = await getData();
-  return users.find(u => u.id === id);
+  return users.find((u) => u.id === id);
 };
-

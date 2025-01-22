@@ -80,11 +80,9 @@ export default tseslint.config(
         { allowNumberAndString: true },
       ],
 
-      'no-extra-boolean-cast': 0,
       'n/no-process-env': 1,
       'n/no-missing-import': 0,
       'n/no-unpublished-import': 0,
-      'prefer-const': 'warn',
     },
   },
 );

@@ -3,7 +3,7 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import helmet from 'helmet';
-import logger from 'morgan';
+import morgan from 'morgan';
 
 // Won't be needed with express 5
 import 'express-async-errors';
@@ -16,12 +16,16 @@ const BASE_API_PATH = '/api';
 
 export const app = express();
 
+const logger = morgan('combined', {
+  skip: () => process.env.NODE_ENV === 'test',
+});
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(helmet());
 app.use(cors());
-app.use(logger('combined'));
+app.use(logger);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

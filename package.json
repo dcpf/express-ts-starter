@@ -1,6 +1,6 @@
 {
   "name": "express-ts-starter",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "keywords": [
     "Express",
     "TypeScript",
@@ -18,7 +18,7 @@
     "dev-start:hot": "nodemon --exec \"yarn run dev-start\" --watch ./src --ext .ts",
     "lint": "eslint",
     "prettier": "npx prettier . --check",
-    "test": "jest",
+    "test": "NODE_ENV=test && jest",
     "test:hot": "nodemon --exec \"yarn run test\" --watch ./src --watch ./spec --ext .ts",
     "type-check": "tsc --noEmit"
   },

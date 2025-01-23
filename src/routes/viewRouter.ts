@@ -1,9 +1,10 @@
 import express from 'express';
-import home from './view/home';
+import * as routers from './view';
 
 const router = express.Router();
 
-router.use('/', home);
+router.use('/', routers.homeRouter);
+router.use('/users', routers.usersRouter);
 
 // Add more routes as needed
 

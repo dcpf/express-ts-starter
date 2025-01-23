@@ -28,4 +28,10 @@ describe('App API tests', () => {
     expect(response.statusCode).toBe(404);
     expect(response.body).toEqual({ message: 'No user found for id 5' });
   });
+
+  it('404 - not found', async () => {
+    const response = await request(app).get('/api/invalid');
+    expect(response.statusCode).toBe(404);
+    expect(response.body).toEqual({ message: 'Not found' });
+  });
 });

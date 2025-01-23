@@ -1,6 +1,6 @@
 ## Express with TypeScript Starter
 
-Starter scaffolding for Express with TypeScript and example routes for HTML views and API endpoints.
+Starter scaffolding for Express with TypeScript, including routes for HTML views and API endpoints, error handling, unit tests.
 
 ### Comes with:
 - cookie-parser
@@ -37,14 +37,17 @@ Starter scaffolding for Express with TypeScript and example routes for HTML view
     │   ├── api
     │   │   └── users.ts
     │   ├── view
-    │   │   └── home.ts
+    │   │   ├── home.ts
+    │   │   └── users.ts
     │   ├── apiRouter.ts
     │   └── viewRouter.ts
     ├── service
     │   └── userService.ts
     ├── views
-    │   ├── error.ejs
-    │   └── home.ejs
+    │   ├── 404.ejs
+    │   ├── 500.ejs
+    │   ├── home.ejs
+    │   └── users.ejs
     ├── app.ts
     └── server.ts
 ```

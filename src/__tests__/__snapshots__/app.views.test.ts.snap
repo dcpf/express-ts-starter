@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`App view tests 404 1`] = `
+"<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content='width=device-width' name='viewport' />
+  <title>Resource Not Found</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
+</head>
+
+<body>
+  Not Found
+</body>
+
+</html>"
+`;
+
 exports[`App view tests home page view 1`] = `
 "<!DOCTYPE html>
 <html lang="en">
@@ -13,6 +31,60 @@ exports[`App view tests home page view 1`] = `
 
 <body>
   Hello World!
+</body>
+
+</html>"
+`;
+
+exports[`App view tests users page view 1`] = `
+"<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content='width=device-width' name='viewport' />
+  <title>Users</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
+</head>
+
+<body>
+  <h2>Users</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>1</td>
+        <td>Bob Example</td>
+        <td>bob@example.com</td>
+      </tr>
+      
+      <tr>
+        <td>2</td>
+        <td>Daffy Duck</td>
+        <td>d.duck@wb.com</td>
+      </tr>
+      
+      <tr>
+        <td>3</td>
+        <td>Geddy Lee</td>
+        <td>dirk@rush.com</td>
+      </tr>
+      
+      <tr>
+        <td>4</td>
+        <td>Paul McCartney</td>
+        <td>p.mccartney@beatles.com</td>
+      </tr>
+      
+    </tbody>
+  </table>
 </body>
 
 </html>"

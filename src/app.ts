@@ -34,6 +34,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(BASE_API_PATH, apiRouter);
 app.use('/', viewRouter);
 
+const isApiRequest = (req: Request) => {
+  return req.url.startsWith(`${BASE_API_PATH}/`);
+};
+
+// 404 handler
+app.use((req: Request, res: Response) => {
+  res.status(404);
+
+  if (isApiRequest(req)) {
+    res.json({ message: 'Not found' });
+    return;
+  }
+
+  res.render('404');
+});
+
 // api error handler
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   if (err instanceof ApiError) {
@@ -41,7 +57,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     res.status(err.statusCode).json({ message: err.message });
     return;
   }
-  if (req.url.startsWith(`${BASE_API_PATH}/`)) {
+  if (isApiRequest(req)) {
     console.error(err);
     res.status(500).json({ message: err.message });
     return;
@@ -51,11 +67,6 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 // view error handler
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
-  // set locals
-  res.locals.message = err.message;
-  res.locals.error = err;
-
-  // render the error page
-  res.status(500);
-  res.render('error');
+  // TODO: pass error info to template for rendering
+  res.status(500).render('500');
 });

@@ -7,7 +7,7 @@ exports[`App view tests 404 1`] = `
 <head>
   <meta charset="UTF-8">
   <meta content='width=device-width' name='viewport' />
-  <title>Resource Not Found</title>
+  <title>Express with TypeScript Starter</title>
   <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
 </head>
 
@@ -43,7 +43,7 @@ exports[`App view tests users page view 1`] = `
 <head>
   <meta charset="UTF-8">
   <meta content='width=device-width' name='viewport' />
-  <title>Users</title>
+  <title>Express with TypeScript Starter</title>
   <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
 </head>
 

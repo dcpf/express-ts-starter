@@ -67,6 +67,5 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 // view error handler
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
-  // TODO: pass error info to template for rendering
-  res.status(500).render('500');
+  res.status(500).render('500', { error: err.message });
 });

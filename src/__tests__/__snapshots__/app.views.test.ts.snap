@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App view tests 404 1`] = `
+exports[`App views 404 1`] = `
 "<!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +18,7 @@ exports[`App view tests 404 1`] = `
 </html>"
 `;
 
-exports[`App view tests home page view 1`] = `
+exports[`App views home page view 1`] = `
 "<!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +36,25 @@ exports[`App view tests home page view 1`] = `
 </html>"
 `;
 
-exports[`App view tests users page view 1`] = `
+exports[`App views users page throws error 1`] = `
+"<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content='width=device-width' name='viewport' />
+  <title>Express with TypeScript Starter</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
+</head>
+
+<body>
+  The following error occured: Kaboom!
+</body>
+
+</html>"
+`;
+
+exports[`App views users page view 1`] = `
 "<!DOCTYPE html>
 <html lang="en">
 

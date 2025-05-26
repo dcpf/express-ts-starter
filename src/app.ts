@@ -4,10 +4,6 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
-
-// Won't be needed with express 5
-import 'express-async-errors';
-
 import apiRouter from './routes/apiRouter';
 import viewRouter from './routes/viewRouter';
 import { ApiError } from './error/ApiError';
